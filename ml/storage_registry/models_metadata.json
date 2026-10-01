@@ -1,0 +1,122 @@
+[
+  {
+    "run_id": "run_20261001_083038",
+    "model_name": "test_isolation_forest",
+    "version": "v1.0.1",
+    "params": {
+      "contamination": 0.05,
+      "n_estimators": 100
+    },
+    "metrics": {
+      "f1_score": 0.942,
+      "max_psi": 0.04
+    },
+    "tags": {
+      "stage": "production",
+      "framework": "scikit-learn"
+    },
+    "logged_at": "2026-10-01T08:30:38.982396+00:00",
+    "tracking_uri": "http://localhost:5000",
+    "mlflow_logged": false
+  },
+  {
+    "run_id": "run_20261001_081543",
+    "model_name": "test_isolation_forest",
+    "version": "v1.0.1",
+    "params": {
+      "contamination": 0.05,
+      "n_estimators": 100
+    },
+    "metrics": {
+      "f1_score": 0.942,
+      "max_psi": 0.04
+    },
+    "tags": {
+      "stage": "production",
+      "framework": "scikit-learn"
+    },
+    "logged_at": "2026-10-01T08:15:43.363517+00:00",
+    "tracking_uri": "http://localhost:5000",
+    "mlflow_logged": false
+  },
+  {
+    "run_id": "run_20261001_080911",
+    "model_name": "test_isolation_forest",
+    "version": "v1.0.1",
+    "params": {
+      "contamination": 0.05,
+      "n_estimators": 100
+    },
+    "metrics": {
+      "f1_score": 0.942,
+      "max_psi": 0.04
+    },
+    "tags": {
+      "stage": "production",
+      "framework": "scikit-learn"
+    },
+    "logged_at": "2026-10-01T08:09:11.989183+00:00",
+    "tracking_uri": "http://localhost:5000",
+    "mlflow_logged": false
+  },
+  {
+    "run_id": "run_20261001_080133",
+    "model_name": "test_isolation_forest",
+    "version": "v1.0.1",
+    "params": {
+      "contamination": 0.05,
+      "n_estimators": 100
+    },
+    "metrics": {
+      "f1_score": 0.942,
+      "max_psi": 0.04
+    },
+    "tags": {
+      "stage": "production",
+      "framework": "scikit-learn"
+    },
+    "logged_at": "2026-10-01T08:01:33.662326+00:00",
+    "tracking_uri": "http://localhost:5000",
+    "mlflow_logged": false
+  },
+  {
+    "run_id": "run_20261001_080125",
+    "model_name": "test_isolation_forest",
+    "version": "v1.0.1",
+    "params": {
+      "contamination": 0.05,
+      "n_estimators": 100
+    },
+    "metrics": {
+      "f1_score": 0.942,
+      "max_psi": 0.04
+    },
+    "tags": {
+      "stage": "production",
+      "framework": "scikit-learn"
+    },
+    "logged_at": "2026-10-01T08:01:25.087926+00:00",
+    "tracking_uri": "http://localhost:5000",
+    "mlflow_logged": false
+  },
+  {
+    "run_id": "run_20261001_080050",
+    "model_name": "test_isolation_forest",
+    "version": "v1.0.1",
+    "params": {
+      "contamination": 0.05,
+      "n_estimators": 100
+    },
+    "metrics": {
+      "f1_score": 0.942,
+      "max_psi": 0.04
+    },
+    "tags": {
+      "stage": "production",
+      "framework": "scikit-learn"
+    },
+    "logged_at": "2026-10-01T08:00:50.186536+00:00",
+    "tracking_uri": "http://localhost:5000",
+    "mlflow_logged": false
+  }
+]

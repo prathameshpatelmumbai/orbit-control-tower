@@ -1,0 +1,29 @@
+FROM python:3.11-slim
+
+WORKDIR /workspace
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    curl \
+    git \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install python packages
+COPY services/api/requirements.txt /workspace/services/api/requirements.txt
+COPY ml/requirements.txt /workspace/ml/requirements.txt
+COPY agents/requirements.txt /workspace/agents/requirements.txt
+COPY data-gen/requirements.txt /workspace/data-gen/requirements.txt
+
+RUN pip install --no-cache-dir -U pip setuptools wheel && \
+    pip install --no-cache-dir -r /workspace/services/api/requirements.txt
+
+# Copy source code
+COPY . /workspace/
+
+ENV PYTHONPATH="/workspace:${PYTHONPATH}"
+
+EXPOSE 8000
+
+CMD ["uvicorn", "services.api.app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

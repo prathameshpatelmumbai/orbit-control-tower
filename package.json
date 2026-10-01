@@ -1,0 +1,31 @@
+{
+  "name": "orbit-control-tower",
+  "version": "1.0.0",
+  "description": "ORBIT: Autonomous Data Operations Control Tower",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "build:web": "npm run build --workspace=apps/web",
+    "dev:api": "uvicorn services.api.app.main:app --reload --port 8000",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "test:api": "pytest services/api/tests",
+    "test:ml": "pytest ml/tests",
+    "test:gen": "pytest data-gen/tests"
+  },
+  "keywords": [
+    "data-operations",
+    "autonomous-agents",
+    "mlops",
+    "nextjs",
+    "fastapi",
+    "threejs",
+    "control-tower"
+  ],
+  "author": "ORBIT Core Team",
+  "license": "Apache-2.0"
+}

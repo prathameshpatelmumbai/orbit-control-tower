@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: fct_banking_transactions
+    description: "Cleansed and deduplicated banking events"
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        tests:
+          - not_null
+      - name: amount
+        tests:
+          - not_null
+      - name: currency
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD']
+
+  - name: fct_retail_orders
+    description: "Cleansed retail and procurement orders"
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: total_amount
+        tests:
+          - not_null
+
+  - name: fct_supply_chain
+    description: "Shipment telemetry and transit SLA status"
+    columns:
+      - name: shipment_id
+        tests:
+          - unique
+          - not_null
+      - name: current_latitude
+        tests:
+          - not_null
+      - name: current_longitude
+        tests:
+          - not_null
+
+  - name: dm_enterprise_revenue
+    description: "Unified corporate revenue mart"
+    columns:
+      - name: metric_hour
+        tests:
+          - not_null
+      - name: total_enterprise_revenue_usd
+        tests:
+          - not_null

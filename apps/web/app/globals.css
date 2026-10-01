@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 18% 4%;
+    --foreground: 0 0% 95%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-gold/30 selection:text-white;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+  }
+}
+
+/* Film grain subtle overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism restrained styles */
+.glass-panel {
+  background: rgba(18, 20, 26, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(18, 20, 26, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  box-shadow: 0 0 20px rgba(201, 169, 110, 0.05);
+}
+
+/* Custom hairline borders */
+.border-hairline {
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Refined custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07080B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232733;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A96E;
+}
